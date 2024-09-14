@@ -1,0 +1,10 @@
+.title {
+  display: flex;
+  gap: 10px;
+  font-size: 48px;
+  align-items: center;
+}
+
+.titleIcon {
+  color: #052a4b;
+}
