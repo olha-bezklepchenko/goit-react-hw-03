@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import css from "./ContactForm.module.css";
 
 const ContactForm = ({ onAdd }) => {
-  const phoneRegExp = /^(\d{3}-\d{2}-\d{2}|\+\d{2}-\d{3}-\d{2}-\d{4})$/;
+  const phoneRegExp = /(^\d{3}-\d{2}-\d{2}$)|(^\+\d{2}-\d{3}-\d{3}-\d{4}$)/;
 
   const phonebookSchema = Yup.object().shape({
     name: Yup.string()
@@ -12,7 +12,7 @@ const ContactForm = ({ onAdd }) => {
       .max(50, "Too long!")
       .required("Name is required"),
     number: Yup.string()
-      .matches(phoneRegExp, "Must be in format 000-00-00 or +00-000-00-0000")
+      .matches(phoneRegExp, "Must be in format 000-00-00 or +00-000-000-0000")
       .required("Phone number is required"),
   });
 
