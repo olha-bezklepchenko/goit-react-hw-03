@@ -7,10 +7,8 @@
   border-radius: 16px;
   box-shadow: 6px 6px 12px rgba(34, 45, 65, 0.4),
     -6px -6px 12px rgba(240, 248, 255, 0.2);
-
   padding: 20px 20px 32px;
-  width: 364px;
-
+  width: 100%;
   align-items: center;
   margin-bottom: 40px;
 }
@@ -71,4 +69,11 @@
 .btn:hover {
   background-color: #052a4b;
   color: #dce9f5;
+}
+
+@media screen and (min-width: 375px) {
+  .form {
+    min-width: 311px;
+    max-width: 364px;
+  }
 }
